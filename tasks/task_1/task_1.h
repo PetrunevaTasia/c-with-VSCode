@@ -1,22 +1,20 @@
 #include <iostream>
 #include <cstdlib>
 #include <stdlib.h>
-class Node {//inside treap
-public://private or struct
-    int val;
-    int p;
-    int size = 1;
-    int sum;
-    Node* left;
-    Node* right;
-
-    Node();
-    Node(int val_init, Node* left_init, Node* right_init);
-};
 class Treap {
+    struct Node {//inside treap //private or struct
+        int val;
+        int p;
+        int size = 1;
+        int sum;
+        Node* left;
+        Node* right;
+        Node();
+        Node(int val_init, Node* left_init, Node* right_init);            
+    };
 private:
-    Node* root = nullptr;
-    Node* merge(Node* left, Node* right);
+    Treap::Node* root = nullptr;
+    Treap::Node* merge(Node* left, Node* right);
     int get_sum(Node* node);
     int get_size(Node* node);
     void update(Node* node);

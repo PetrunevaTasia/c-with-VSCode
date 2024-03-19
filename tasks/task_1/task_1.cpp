@@ -1,12 +1,12 @@
 #include "task_1.h"
 
-Node::Node():
+Treap::Node::Node():
     val(0),
     left(nullptr),
     right(nullptr),
     p(rand()) {}
 
-Node::Node(int val_init, Node* left_init = nullptr, Node* right_init = nullptr): 
+Treap::Node::Node(int val_init, Treap::Node* left_init = nullptr, Treap::Node* right_init = nullptr): 
     val(val_init),
     left(left_init),
     right(right_init),
@@ -16,14 +16,14 @@ Node::Node(int val_init, Node* left_init = nullptr, Node* right_init = nullptr):
 Treap::~Treap() {
         deleteTreap(root);
     }
-void Treap::deleteTreap(Node* node) {//static
+void Treap::deleteTreap(Treap::Node* node) {//static
     if (node != nullptr) {
         deleteTreap(node->left);
         deleteTreap(node->right);
         delete node;
     }
 }
-Node* Treap::merge(Node* left, Node* right){
+Treap::Node* Treap::merge(Node* left, Node* right){
     if (left == nullptr) {
         return right;
     }

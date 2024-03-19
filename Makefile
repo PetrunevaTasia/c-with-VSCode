@@ -46,8 +46,8 @@ test_1:
 	./tests/task_1/result.out
 
 test_2:
-	$(CXX) -c tasks/task_2/task_2.cpp  $(SAN) -o tests/task_2/task_2.o 
-	$(CXX) -c tests/task_2/task_2_test.cpp $(SAN) -o tests/task_2/test_2.o
+	$(CXX) -c tasks/task_2/task_2.cpp  $(SAN) -o tests/task_2/task_2.o -std=c++17
+	$(CXX) -c tests/task_2/task_2_test.cpp $(SAN) -o tests/task_2/test_2.o -std=c++17
 	$(CXX) tests/task_2/task_2.o tests/task_2/test_2.o -o tests/task_2/result.out $(TEST_FLAGS) $(SAN)
 	rm tests/task_2/*.o
 	./tests/task_2/result.out

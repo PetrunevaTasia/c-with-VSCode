@@ -1,18 +1,17 @@
 #include "task_4.h"
 
-Node::Node():
+Treap::Node::Node():
     val(0),
     left(nullptr),
     right(nullptr),
     p(rand()) {}
 
-Node::Node(int val_init, Node* left_init = nullptr, Node* right_init = nullptr): 
+Treap::Node::Node(int val_init, Treap::Node* left_init = nullptr, Treap::Node* right_init = nullptr): 
     val(val_init),
     left(left_init),
     right(right_init),
     sum(val_init),
     p(rand()) {}
-
 
 
 Treap::Treap(): root(nullptr) {};
@@ -47,12 +46,12 @@ Treap& Treap::operator=(Treap other)
     return *this;
 }
 
-Node *Treap::get_root()
+Treap::Node *Treap::get_root()
 {
     return root;
 }
 
-Node* Treap::merge(Node* left, Node* right){
+Treap::Node* Treap::merge(Node* left, Node* right){
     if (left == nullptr) {
         return right;
     }
