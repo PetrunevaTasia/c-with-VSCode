@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "../../tasks/task_2/task_2.h"
+#include "../../tasks/task_2/task_2.hpp"
 #include <optional>
 
 using namespace std;

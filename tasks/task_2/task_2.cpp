@@ -1,4 +1,4 @@
-#include "task_2.h"
+#include "task_2.hpp"
 
 Line::Line(const double x, const double y) : p(pair<double, double>(x, y)) {}
 Line::Line(const pair<double, double>& p_) : p(p_) {}

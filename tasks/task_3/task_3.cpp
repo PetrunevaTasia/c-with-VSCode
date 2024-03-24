@@ -1,4 +1,4 @@
-#include "task_3.h"
+#include "task_3.hpp"
 
 Treap::Node::Node():
     val(0),

@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "../../tasks/task_4/task_4.h"
+#include "../../tasks/task_4/task_4.hpp"
 
 int arr[] = { 5, 24, 42, 13, 99, 2, 17 };
 TEST(FirstTest, move_constructor) {
